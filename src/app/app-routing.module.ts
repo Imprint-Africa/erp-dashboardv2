@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from '../app/guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'fibre', loadChildren: './fibre/fibre.module#FibreModule' },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: 'fibre', loadChildren: './fibre/fibre.module#FibreModule', canActivate: [AuthGuard] },
   { path: '**', redirectTo: '' },
 ];
 
