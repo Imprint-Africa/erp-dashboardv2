@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
   ) {
     // redirect to home if the user is already logged in
     if (this.authService.currentUserValue) {
@@ -59,6 +58,7 @@ export class LoginComponent implements OnInit {
     error => {
       this.loginError = 'Username or Password is Incorrect';
       this.loading = false;
+      console.error(error);
     });
   }
 }
