@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'fibre', loadChildren: './fibre/fibre.module#FibreModule', canActivate: [AuthGuard] },
-  { path: '**', redirectTo: '' },
+  // { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

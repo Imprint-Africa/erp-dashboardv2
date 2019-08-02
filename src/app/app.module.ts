@@ -9,6 +9,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { SidebarModule } from 'ng-sidebar';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LoginComponent } from './components/login/login.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    SidebarModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
