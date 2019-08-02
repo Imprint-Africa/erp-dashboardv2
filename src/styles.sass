@@ -1,8 +1,191 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css"
+
 body
     height: 100%
     width: 100%
     margin: 0
     background: #f5f5f9
 
+h1
+  font-family: Montserrat
+  font-style: normal
+  font-weight: bold
+  font-size: 18px
+  line-height: 35px
+  display: flex
+  align-items: center
+  color: #1D1E56
+
+h2
+  font-family: Montserrat
+  font-style: normal
+  font-weight: bold
+  font-size: 15px
+  line-height: 32px
+  display: flex
+  align-items: center
+  color: #3b3e42
+
+h3
+  font-family: Montserrat
+  font-style: normal
+  font-weight: bold
+  font-size: 13px
+  line-height: 25px
+  display: flex
+  align-items: center
+  color: #7D7D7D
+
+h4
+  font-family: Montserrat
+  font-style: normal
+  font-weight: normal
+  font-size: 11px
+  line-height: 25px
+  display: flex
+  align-items: center
+  color: #7D7D7D
+
+.au-card
+  -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.2)
+  -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.2)
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.2)
+  padding-right: 20px
+  height: fit-content
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
+  background: #fff
+  overflow: hidden
+  font-family: Montserrat
+  font-size: 9px
+
+.au-card:hover
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px
+  transform: translate3d(0px, -1px, 0px)
+
+
+.au-card--border
+  -webkit-border-radius: 3px
+  -moz-border-radius: 3px
+  border-radius: 3px
+
+
+.au-card--border .au-card-title
+  -webkit-border-top-left-radius: 3px
+  -moz-border-radius-topleft: 3px
+  border-top-left-radius: 3px
+  -webkit-border-top-right-radius: 3px
+  -moz-border-radius-topright: 3px
+  border-top-right-radius: 3px
+
+
+.au-card--border .au-card-title .bg-overlay
+  -webkit-border-top-left-radius: 3px
+  -moz-border-radius-topleft: 3px
+  border-top-left-radius: 3px
+  -webkit-border-top-right-radius: 3px
+  -moz-border-radius-topright: 3px
+  border-top-right-radius: 3px
+
+
+.au-card-bordered
+  border: 1px solid #e5e5e5
+  background: #fff
+  padding: 40px
+  padding-top: 42px
+  padding-right: 10px
+  margin-bottom: 40px
+
+.au-card-inner
+  padding: 10px
+  padding-right: 5px
+  padding-bottom: 15px
+
+.au-card .image-card
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1)
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1)
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1)
+  padding-right: 20px
+  width: 70px
+  height: 60px
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
+  background: #fff
+  overflow: hidden
+  font-family: Montserrat
+  font-size: 9px
+
+.au-card .image-card img
+  top: 50px
+  width: 50px
+  height: 50px
+  border-radius: 100%
+
+.au-card-inner .progress
+  width: auto
+  height: 7px
+
+.page-container
+  max-width: max-content
+  width: 100%
+  background: none
+  display: flex
+  justify-content: space-between
+  margin: 0 auto
+
+.page-container .main-content
+  position: absolute
+  overflow-x: hidden
+  max-width: 1400px
+  width: calc(100% - 164px)
+  background: none
+  border-radius: 0
+  padding: 24px
+  box-sizing: border-box
+  left: 13%
+  top: 10%
+  min-height: 100vh
+
+@media (max-width: 991px)
+  main-content
+    padding-top: 20px
+
+.form-header
+  font-family: Montserrat
+  font-size: 10px
+
+.form-header input
+  width: 500px
+  height: 30px
+  padding: 10px
+  border-radius: 5px
+  border-top-color: #e5e5e5
+  font-size: 14px
+
+.search-trigger
+  border: none
+  background: none
+
+.nav-tabs li a
+  font-family: Montserrat
+  font-size: 14px
+  margin: 0px 30px 0px 0px
+  font-weight: bold
+  color: #1D1E56
+
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover
+  border-top: none
+  border-left: none
+  border-right: none
+  border-bottom: 3px solid #e9a39c
+
+
+.nav-tabs>li>a:hover
+  border: 1px solid transparent
+
+.nav>li>a:focus, .nav>li>a:hover
+  background-color: transparent
