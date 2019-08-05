@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy, DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+// import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 import { AppComponent } from './app.component';
@@ -23,10 +25,12 @@ import { SidebarModule } from 'ng-sidebar';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    SidebarModule
+    SidebarModule,
+    // Ng2SearchPipeModule,
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })
