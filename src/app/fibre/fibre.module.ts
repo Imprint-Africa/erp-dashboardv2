@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FibreRoutingModule } from './fibre-routing.module';
 import { SidebarModule } from 'ng-sidebar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
@@ -33,7 +35,10 @@ import { InstallationTeamComponent } from './components/teams/installation-team/
   imports: [
     CommonModule,
     FibreRoutingModule,
-    SidebarModule
+    SidebarModule,
+    FormsModule,
+    ReactiveFormsModule,
+    Ng2SearchPipeModule,
   ],
   exports: []
 })
