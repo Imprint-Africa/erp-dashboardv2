@@ -5,23 +5,23 @@ import { SidebarModule } from 'ng-sidebar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 
-import { ProjectFormComponent } from './components/projects/project-form/project-form.component';
-import { ProjectDashboardComponent } from './components/projects/project-dashboard/project-dashboard.component';
+import { ProjectFormComponent } from './components/home-fibre/projects/project-form/project-form.component';
+import { ProjectDashboardComponent } from './components/home-fibre/projects/project-dashboard/project-dashboard.component';
 
-import { SiteFormComponent } from './components/sites/site-form/site-form.component';
-import { SiteDashboardComponent } from './components/sites/site-dashboard/site-dashboard.component';
+import { SiteFormComponent } from './components/home-fibre/sites/site-form/site-form.component';
+import { SiteDashboardComponent } from './components/home-fibre/sites/site-dashboard/site-dashboard.component';
 
-import { TeamDashboardComponent } from './components/teams/team-dashboard/team-dashboard.component';
-import { CommercialTeamComponent } from './components/teams/commercial-team/commercial-team.component';
-import { CivilTeamComponent } from './components/teams/civil-team/civil-team.component';
-import { ProcurementTeamComponent } from './components/teams/procurement-team/procurement-team.component';
-import { InstallationTeamComponent } from './components/teams/installation-team/installation-team.component';
+import { TeamDashboardComponent } from './components/home-fibre/teams/team-dashboard/team-dashboard.component';
+import { CommercialTeamComponent } from './components/home-fibre/teams/commercial-team/commercial-team.component';
+import { CivilTeamComponent } from './components/home-fibre/teams/civil-team/civil-team.component';
+import { ProcurementTeamComponent } from './components/home-fibre/teams/procurement-team/procurement-team.component';
+import { InstallationTeamComponent } from './components/home-fibre/teams/installation-team/installation-team.component';
+import { HomeComponent } from './components/home-fibre/home.component';
+import {ToastrModule} from 'ngx-toastr';
 
 @NgModule({
   declarations: [
-    SidebarComponent,
     ProjectFormComponent,
     ProjectDashboardComponent,
     SiteFormComponent,
@@ -31,6 +31,7 @@ import { InstallationTeamComponent } from './components/teams/installation-team/
     CivilTeamComponent,
     ProcurementTeamComponent,
     InstallationTeamComponent,
+    HomeComponent,
   ],
   imports: [
     CommonModule,
@@ -39,6 +40,11 @@ import { InstallationTeamComponent } from './components/teams/installation-team/
     FormsModule,
     ReactiveFormsModule,
     Ng2SearchPipeModule,
+    ToastrModule.forRoot({
+      timeOut: 7000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: false,
+    }),
   ],
   exports: []
 })

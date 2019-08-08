@@ -1,41 +1,36 @@
-<div class="container-erp">
-  <h1>Welcome, choose where to go</h1>
-  <div class="row">
-    <a class="col-sm-4 erp-link" routerLink="" routerLinkActive="active">
-      <div class="au-card erp-card">
-        <div class="au-card-inner">
-          <div class="chart-note-wrap">
-            <div class="chart-note mr-0 d-block">
-              <span><h2>BTS</h2></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-    <a class="col-sm-4 erp-link" routerLink="/fibre" routerLinkActive="active">
-      <div class="au-card erp-card">
-        <div class="au-card-inner">
-          <div class="chart-note-wrap">
-            <div class="chart-note mr-0 d-block">
-              <span><h2>FIBRE TO THE SITE</h2></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-    <a class="col-sm-4 erp-link" routerLink="" routerLinkActive="active">
-      <div class="au-card erp-card">
-        <div class="au-card-inner">
-          <div class="chart-note-wrap">
-            <div class="chart-note mr-0 d-block">
-              <span><h2>FIBRE TO THE HOME</h2></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
+<section id="title_section">
+  <h4>Welcome, choose where to go</h4>
+</section>
+
+<section id="card_section" class="card-group">
+
+  <a class="card mx-auto"  routerLink="/fibre/teams" routerLinkActive="active">
+
+    <div class="card-body" >
+      <div class="card-text card-details">BTS</div>
+    </div>
+
+  </a>
+
+  <a class="card mx-auto"  routerLink="" routerLinkActive="active">
+
+    <div class="card-body">
+      <div class="card-text card-details">Fibre to the home</div>
+    </div>
+
+  </a>
+
+  <a class="card mx-auto"  routerLink="/fibre/projects" routerLinkActive="active">
+
+    <div class="card-body" >
+      <div class="card-text card-details">Fibre to the site <span class="project-data"></span></div>
+    </div>
+
+  </a>
+
+</section>
+
+
   <div class="logout">
   <button class="btn btn-outline-danger my-2 my-sm-0 btn-sm" (click)="logout()">Logout</button>
   </div>
-</div>

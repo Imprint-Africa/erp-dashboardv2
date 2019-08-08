@@ -15,6 +15,10 @@ export class LoginComponent implements OnInit {
   submitted = false;
   loading = false;
   loginError: string;
+  public togglePassword = 'password';
+  public showPasswordIcon;
+  public hidePasswordIcon;
+
 
   constructor(
     private authService: AuthService,
@@ -28,6 +32,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.showPasswordIcon = false;
+    this.hidePasswordIcon = true;
+    this.togglePassword = 'password';
+
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -60,5 +68,18 @@ export class LoginComponent implements OnInit {
       this.loading = false;
       console.error(error);
     });
+  }
+
+  // Password Toggle Functions
+  showPassword() {
+    this.showPasswordIcon = true;
+    this.hidePasswordIcon = false;
+    this.togglePassword = 'text';
+  }
+
+  hidePassword() {
+    this.showPasswordIcon = false;
+    this.hidePasswordIcon = true;
+    this.togglePassword = 'password';
   }
 }

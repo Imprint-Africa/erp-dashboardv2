@@ -1,73 +1,28 @@
-h1
-  font-family: Montserrat
-  font-size: 30px
-  font-weight: bold
+#card_section
 
-h2
-  font-family: Montserrat
-  font-size: 18px
-  font-weight: lighter
+  .card
+    -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.2)
+    -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.2)
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.2)
+    border: none
+    background-color: white
+    border-radius: 10px
+    max-width: 20em
+    min-width: 20em
+    margin: 0 1em 1em 0
+    cursor: pointer
+    font-family: Montserrat
+    .card-body
 
-.container-erp
-  margin: 150px 400px
+      .card-img
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1)
+        width: fit-content
+        img
+          width: 5rem
 
-.au-card .erp-card
-  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1)
-  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1)
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1)
-  padding-right: 20px
-  height: fit-content
-  -webkit-border-radius: 10px
-  -moz-border-radius: 10px
-  border-radius: 10px
-  background: #fff
-  overflow: hidden
-  font-family: Montserrat
-  font-size: 25px
-  position: absolute
+    &:hover
+      box-shadow: 0 5px 5px rgba(0, 0, 0, .3)
 
-.au-card--border
-  -webkit-border-radius: 3px
-  -moz-border-radius: 3px
-  border-radius: 3px
-
-
-.au-card--border .au-card-title
-  -webkit-border-top-left-radius: 3px
-  -moz-border-radius-topleft: 3px
-  border-top-left-radius: 3px
-  -webkit-border-top-right-radius: 3px
-  -moz-border-radius-topright: 3px
-  border-top-right-radius: 3px
-
-
-.au-card--border .au-card-title .bg-overlay
-  -webkit-border-top-left-radius: 3px
-  -moz-border-radius-topleft: 3px
-  border-top-left-radius: 3px
-  -webkit-border-top-right-radius: 3px
-  -moz-border-radius-topright: 3px
-  border-top-right-radius: 3px
-
-
-.au-card-bordered
-  border: 1px solid #e5e5e5
-  background: #fff
-  padding: 40px
-  padding-top: 42px
-  padding-right: 10px
-  margin-bottom: 40px
-
-.au-card-inner
-  padding: 10px
-  padding-right: 5px
-  padding-bottom: 15px
-
-
-.erp-link
-  color: #1D1E56
+a
   text-decoration: none
-  width: 150px
-
-.logout
-  padding-top: 10px
+  color: #3b3e42
