@@ -22,11 +22,10 @@ const routes: Routes = [
   {path: 'site-teams', component: HomeComponent,
   children: [{path: '', component: TeamDashboardComponent}]
   },
-
-  { path: 'createproject', component: ProjectFormComponent },
-  // { path: 'sites', component: SiteDashboardComponent },
+  {path: 'createproject', component: HomeComponent,
+    children: [{path: '', component: ProjectFormComponent}]
+  },
   { path: 'addsite', component: SiteFormComponent },
-  // { path: 'teams', component: TeamDashboardComponent },
   { path: 'commercialteam', component: CommercialTeamComponent },
   { path: 'procurementteam', component: ProcurementTeamComponent },
   { path: 'civilteam', component: CivilTeamComponent },
