@@ -7,7 +7,7 @@ import { Project } from '../models/project';
 })
 export class ProjectService {
 
-  apiUrl = 'http://68.183.79.24/erp_fiber_ftts/fttsproject/';
+  apiUrl = 'http://68.183.79.24/erp_ftts/fttsproject/';
 
   constructor(
     private http: HttpClient
@@ -19,5 +19,9 @@ export class ProjectService {
 
   createProject(formData) {
     return this.http.post(this.apiUrl, formData);
+  }
+
+  getProjectById(id) {
+    return this.http.get<Project>(`${this.apiUrl}${id}`);
   }
 }
